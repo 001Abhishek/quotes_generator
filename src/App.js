@@ -52,9 +52,6 @@ const App = () => {
         <div className="quoteButton"> <button onClick={quoteAPI}>Generate New Quote</button></div>
         <div className ="twitterButton"><button  onClick={tweetQuote}>Tweet</button></div>
         <div className ="whatsAppButton"><button  onClick={whatsAppQuote}>WhatsApp</button></div>
-
-        
-
       </div>
     </div>
   </div>

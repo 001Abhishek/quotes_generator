@@ -13,7 +13,7 @@
 
 
 .quoteBox{
-  position:absolute;
+  /* position:absolute;
   background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
   background: linear-gradient(to right, #D4D3DD, #EFEFBB);
   border: 1px solid black;
@@ -22,17 +22,36 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2em;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px; */
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:10em 2em 10em 2em;
+  width: 500px;
+  top:50%;
+  left: 50%;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#22a538;
+  text-align:center;
+  transition: all 0.2s;
 
 }
 
 .quoteButton{
   position: relative;
-  padding-top: 1.5em;
+  padding-top: 4.5em;
+  padding-left:8em;
   display: flex;
+  width: 200px;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  -ms-transform: translateY(-20%);
+  transform: translateY(-30%);
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 .tweetButton{
   width: 25px;
@@ -40,7 +59,7 @@
 
 }
 .whatsAppButton{
-  width: 21px;
+  width: 20px;
   
 
 }
@@ -72,24 +91,22 @@ button:active{
 
 .quote{
   margin: 1em;
-  font-family: georgia;
+  font-family: monospace;
 }
 
 .author{
   margin: .1em;
-  font-family: impact;
+  font-family: monospace;
   float: right;
 }
 @media only screen and (max-device-width: 480px) {
   
-  .quoteBox{
-    width: fit-content;
-  }
   .author{
     margin: .1rem;
   }
   .quoteButton{
-    margin: 1em;
+    margin: 4px -18% !important;
+
     
   }
   .tweetButton, .whatsAppButton{

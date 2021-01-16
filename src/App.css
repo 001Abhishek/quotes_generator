@@ -68,4 +68,20 @@ button:active{
   font-family: impact;
   float: right;
 }
+@media only screen and (max-device-width: 480px) {
+  
+  .quoteBox{
+    width: fit-content;
+  }
+  .author{
+    margin: .1rem;
+  }
+  .quoteButton{
+    margin: 1em;
+  }
+  
+
+}
+
+
 

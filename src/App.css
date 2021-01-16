@@ -2,13 +2,14 @@
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background: #EFEFBB; 
+  /*background: #EFEFBB; 
   background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-  background: linear-gradient(to right, #D4D3DD, #EFEFBB);
+  background: linear-gradient(to right, #D4D3DD, #EFEFBB);*/
+  background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+  background-size: cover;
+
 
 }
-
-
 
 
 .quoteBox{
@@ -34,18 +35,19 @@
   margin-right: auto;
 }
 .tweetButton{
-  position: relative;
-  display:flex;
+  width: 25px;
+  margin: 0 2% !important;
+
 }
 .whatsAppButton{
-  position: relative;
-  padding-top: .4em;
-  display: flex;
-  
+  width: 25px;
+  margin: 0 2% !important;
+
 }
 
 button{
-font-family: cursive;
+font-family: tahoma;
+
 }
 
 
@@ -78,7 +80,13 @@ button:active{
   }
   .quoteButton{
     margin: 1em;
+    
   }
+  .tweetButton, .whatsAppButton{
+    margin: 4px 2% !important;
+
+  }
+ 
   
 
 }

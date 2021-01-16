@@ -1,6 +1,8 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./App.css";
 import axios from "axios";
+import twitterImg from "./twitter.png";
+import whatsappImg from "./WhatsApp.svg";
 
 
 const App = () => {
@@ -11,7 +13,6 @@ const App = () => {
     let arrayOfQuotes = [];
     try {
       const data = await axios.get(" https://api.quotable.io/random");
-      console.log(data);
       arrayOfQuotes=data.data;
       
     } catch (error) {
@@ -50,8 +51,8 @@ const App = () => {
         <div className="quote"><h3>{quote}</h3></div>
         <div className="author">~{author}</div>
         <div className="quoteButton"> <button onClick={quoteAPI}>Generate New Quote</button></div>
-        <div className ="twitterButton"><button  onClick={tweetQuote}>Tweet</button></div>
-        <div className ="whatsAppButton"><button  onClick={whatsAppQuote}>WhatsApp</button></div>
+        <button  onClick={tweetQuote}><img src={twitterImg} alt ="twitter logo" className ="tweetButton"/></button>
+        <button  onClick={whatsAppQuote}><img src={whatsappImg} alt ="whatsapp logo"className ="whatsAppButton"/></button>
       </div>
     </div>
   </div>

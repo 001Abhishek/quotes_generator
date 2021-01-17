@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import "./App.css";
 import axios from "axios";
-import twitterImg from "./twitter.png";
-import whatsappImg from "./WhatsApp.svg";
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import { Button } from 'react-bootstrap';
+import {TwitterShareButton,TwitterIcon,WhatsappShareButton,WhatsappIcon} from 'react-share'
+
 
 
 const App = () => {
@@ -29,30 +32,23 @@ const App = () => {
 
   };
 
-  const tweetQuote = () => {
-    let tweetPost = `https://twitter.com/intent/tweet?text=${quote} ~ ${author}`;
-    window.open(tweetPost);
-  }
-
-  const whatsAppQuote = () => {
-    let whatsAppPost = `whatsapp://send?text=${quote} ~ ${author}`;
-    window.open(whatsAppPost);
-
-  }
-
   useEffect(() => {
     quoteAPI();
   }, [])
 
   return (
   <div className="App">
-    <div className="quoteBox">
-      <div className="Container">
+    <div className="Container">
+      <div className="quoteBox">
         <div className="quote"><h3>{quote}</h3></div>
-        <div className="author">~{author}</div>
-        <div className="quoteButton"> <button onClick={quoteAPI}>Generate New Quote</button></div>
-        <button  onClick={tweetQuote}><img src={twitterImg} alt ="twitter logo" className ="tweetButton"/></button>
-        <button  onClick={whatsAppQuote}><img src={whatsappImg} alt ="whatsapp logo"className ="whatsAppButton"/></button>
+        <div className="author">-{author}</div>
+        <div> <Button className="quoteButton" onClick={quoteAPI}>Generate New Quote</Button></div>
+           <TwitterShareButton  url={`${quote} - ${author}`} >
+                <TwitterIcon  size={40} round={true} />
+           </TwitterShareButton>
+            <WhatsappShareButton  url={`${quote} - ${author}`} >
+                <WhatsappIcon  size={40} round={true} />
+            </WhatsappShareButton>
       </div>
     </div>
   </div>

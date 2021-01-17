@@ -1,92 +1,34 @@
-.App{
+.Container{
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  /*background: #EFEFBB; 
-  background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-  background: linear-gradient(to right, #D4D3DD, #EFEFBB);*/
-  background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+  background-image: url('./cool-background.png');
   background-size: cover;
-
-
 }
 
 
 .quoteBox{
-  /* position:absolute;
-  background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-  background: linear-gradient(to right, #D4D3DD, #EFEFBB);
-  border: 1px solid black;
-  width: 500px;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2em;
-  border-radius: 10px 10px 10px 10px; */
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #FFFFFF;
-  margin:10em 2em 10em 2em;
-  width: 500px;
-  top:50%;
-  left: 50%;
-  border-radius:0.12em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  color:#22a538;
-  text-align:center;
-  transition: all 0.2s;
+  width: 500px;  /* content width */
+  padding: 20px;  /* space between content and border */
+  margin: 20px;  /* space between border and other elements */
+  border-width: 20px;  /* border thickness */
+  border-style:solid;
+  border-radius:0px; /* round corners */
+  background-color:#F4F4F4; /* try red, orange, ... */
 
+
+}
+.quoteBox:hover {
+  border-width:30px; /* border thickness */
+  border-color:#29AAE1;
+  background-color:white; /* try red, orange, ... */
 }
 
 .quoteButton{
-  position: relative;
-  padding-top: 4.5em;
-  padding-left:8em;
-  display: flex;
-  width: 200px;
-  justify-content: center;
-  -ms-transform: translateY(-20%);
-  transform: translateY(-30%);
-  /* margin-left: auto;
-  margin-right: auto; */
-}
-.tweetButton{
-  width: 25px;
- 
+  margin: 1em 4%;
+  text-align: center;  
 
-}
-.whatsAppButton{
-  width: 20px;
   
-
-}
-
-button{
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  color:#22a538;
-  text-align:center;
-  transition: all 0.2s;}
-
-
-button:hover{
-  color:#000000;
-  background-color:#FFFFFF;
-}
-
-button:active{
-  position: relative;
-  top: 1px;
 }
 
 .quote{
@@ -105,17 +47,10 @@ button:active{
     margin: .1rem;
   }
   .quoteButton{
-    margin: 4px -18% !important;
-
+    margin: 4px 0% !important;
     
   }
-  .tweetButton, .whatsAppButton{
-    margin: 4px 2% !important;
-
-  }
  
-  
-
 }
 
 

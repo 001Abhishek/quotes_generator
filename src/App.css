@@ -8,6 +8,7 @@
 
 
 .quoteBox{
+  display: inline;
   width: 500px;  /* content width */
   padding: 20px;  /* space between content and border */
   margin: 20px;  /* space between border and other elements */
